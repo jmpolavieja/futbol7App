@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead [ngClass]="{'thead-dark': letra == 'A', 'thead-light': letra == 'B'}">
+  <tr>
+    <th>Eq.</th>
+    <th>Ptos.</th>
+    <th>PJ</th>
+    <th class="d-none d-sm-table-cell">PG</th>
+    <th class="d-none d-sm-table-cell">PE</th>
+    <th class="d-none d-sm-table-cell">PP</th>
+    <th>GF</th>
+    <th>GC</th>
+    <th>Dif.</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let puesto of grupo">
+    <td>{{puesto.equipo}}</td>
+    <td>{{puesto.ptos}}</td>
+    <td>{{puesto.pj}}</td>
+    <td class="d-none d-sm-table-cell">{{puesto.pg}}</td>
+    <td class="d-none d-sm-table-cell">{{puesto.pe}}</td>
+    <td class="d-none d-sm-table-cell">{{puesto.pp}}</td>
+    <td>{{puesto.gf}}</td>
+    <td>{{puesto.gc}}</td>
+    <td>{{puesto.gf - puesto.gc}}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,16 @@
+<h3>Clasificaciones</h3>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Grupo A</a>
+    <ng-template ngbNavContent>
+      <app-tab-clas [grupo]="clasif[0]" [letra]="'A'"></app-tab-clas>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Grupo B</a>
+    <ng-template ngbNavContent>
+      <app-tab-clas [grupo]="clasif[1]" [letra]="'B'"></app-tab-clas>
+    </ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th></th>
+    <th class="text-center">Local</th>
+    <th class="text-center">Visitante</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let match of partidos" routerLink="/partidos/editarPartido/{{match.id}}">
+    <td>{{match.gL}}</td>
+    <td class="text-center">{{match.local}}</td>
+    <td class="text-center">{{match.visit}}</td>
+    <td>{{match.gV}}</td>
+  </tr>
+  </tbody>
+</table>
+
